@@ -1,0 +1,98 @@
+.main-section {
+  height: 600px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  .overlay {
+    filter: blur(2px);
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    margin-left: -2px;
+    margin-top: -2px;
+
+    &--bg {
+      background: url('../assets/background_pexels.jpeg') no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .content {
+    width: 80%;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 6px #000;
+
+    h1 {
+      font-size: 3em;
+      font-weight: bold;
+    }
+
+    h3 {
+      font-size: 2em;
+      font-weight: bold;
+      line-height: 1.5em;
+      letter-spacing: 1px;
+    }
+
+    br {
+      line-height: 1.5em;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .content {
+      h1 {
+        font-size: 3.8em;
+      }
+
+      h3 {
+        font-size: 2em;
+        line-height: 1.3em;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .content {
+      h1 {
+        font-size: 3.3em;
+      }
+
+      h3 {
+        font-size: 1.8em;
+        line-height: 1.2em;
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    .content {
+      h1 {
+        font-size: 3em;
+      }
+
+      h3 {
+        font-size: 1.65em;
+        line-height: 1.15em;
+      }
+    }
+  }
+
+  @media (max-width: 380px) {
+    .content {
+      width: 90%;
+
+      h1 {
+        font-size: 2.9em;
+      }
+
+      h3 {
+        font-size: 1.6em;
+        line-height: 1.1em;
+      }
+    }
+  }
+}

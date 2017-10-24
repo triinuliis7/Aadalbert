@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+/* line 1, C:/wamp64/www/aadalberttest/scss/_main.scss */
+body {
+  width: 100%;
+  height: 100%; }
+
+/* line 6, C:/wamp64/www/aadalberttest/scss/_main.scss */
+html {
+  width: 100%;
+  height: 100%; }
+
+/* line 11, C:/wamp64/www/aadalberttest/scss/_main.scss */
+a:focus {
+  text-decoration: none;
+  color: #fff; }
+
+/* line 16, C:/wamp64/www/aadalberttest/scss/_main.scss */
+* {
+  font-family: Verdana, Geneva, sans-serif; }
+
+/* line 1, C:/wamp64/www/aadalberttest/scss/_navbar.scss */
+.navbar-collapse .navbar-nav > .active > a,
+.navbar-collapse .navbar-nav > .active > a:focus,
+.navbar-collapse .navbar-nav > .active > a:hover,
+.navbar-collapse .navbar-nav > li > a:focus,
+.navbar-collapse .navbar-nav > li > a:hover
+.dropdown-toggle:focus,
+.dropdown-toggle:hover,
+.navbar-collapse .nav-element:focus,
+.navbar-collapse .nav-element:hover {
+  border-bottom-style: solid;
+  border-bottom-color: #1F5800;
+  background-color: transparent; }
+
+/* line 15, C:/wamp64/www/aadalberttest/scss/_navbar.scss */
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+  background-color: transparent; }
+
+/* line 21, C:/wamp64/www/aadalberttest/scss/_navbar.scss */
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .active > a:hover {
+  background-color: #fff;
+  color: #333; }
+
+/* line 28, C:/wamp64/www/aadalberttest/scss/_navbar.scss */
+.dropdown-menu > .active > a:hover {
+  background-color: #f5f5f5;
+  color: #333; }
+
+/* line 33, C:/wamp64/www/aadalberttest/scss/_navbar.scss */
+.navbar-nav > li {
+  float: left; }
+
+/* line 37, C:/wamp64/www/aadalberttest/scss/_navbar.scss */
+.navbar-default .navbar-nav > li > a {
+  font-size: 18px;
+  margin: 0 2px 0 2px; }
+
+/* line 42, C:/wamp64/www/aadalberttest/scss/_navbar.scss */
+.navbar-default .navbar-brand {
+  padding-bottom: 0px;
+  font-size: 24px;
+  color: #5e5e5e;
+  cursor: default; }
+
+/* line 49, C:/wamp64/www/aadalberttest/scss/_navbar.scss */
+.brand {
+  padding: 5px 15px 5px 5px;
+  height: 50px;
+  width: auto; }
+
+/* line 55, C:/wamp64/www/aadalberttest/scss/_navbar.scss */
+.navbar-default {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-color: transparent;
+  border: none;
+  box-shadow: 0px 0px 10px #ddd; }
+
+/*--- PRELOADED ---*/
+/* line 48, C:/wamp64/www/aadalberttest/scss/style.scss */
+#loader-div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: white;
+  z-index: 1031;
+  visibility: visible;
+  opacity: 1; }
+
+/* line 60, C:/wamp64/www/aadalberttest/scss/style.scss */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #ccc;
+  border-radius: 50%;
+  border-top: 16px solid #1F5800;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+/*--- NAVBAR ---*/
+/* line 89, C:/wamp64/www/aadalberttest/scss/style.scss */
+.navbar-collapse.collapse {
+  display: block !important; }
+
+/* line 93, C:/wamp64/www/aadalberttest/scss/style.scss */
+.navbar-nav > li, .navbar-nav {
+  float: left !important; }
+
+/* line 97, C:/wamp64/www/aadalberttest/scss/style.scss */
+.navbar-nav.navbar-right:last-child {
+  margin-right: -15px !important; }
+
+/* line 101, C:/wamp64/www/aadalberttest/scss/style.scss */
+.navbar-right {
+  float: right !important; }
+
+/* line 105, C:/wamp64/www/aadalberttest/scss/style.scss */
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: initial; }
+
+/* line 109, C:/wamp64/www/aadalberttest/scss/style.scss */
+.mobile-nav {
+  position: fixed;
+  height: 100%;
+  right: -200px;
+  width: 200px;
+  max-width: 100%;
+  background: #fff; }
+  /* line 117, C:/wamp64/www/aadalberttest/scss/style.scss */
+  .mobile-nav li {
+    width: 100%; }
+
+@media (max-width: 767px) {
+  /* line 123, C:/wamp64/www/aadalberttest/scss/style.scss */
+  .navbar-collapse {
+    height: 1px !important; }
+    /* line 126, C:/wamp64/www/aadalberttest/scss/style.scss */
+    .navbar-collapse .navbar-nav {
+      display: none !important; }
+  /* line 130, C:/wamp64/www/aadalberttest/scss/style.scss */
+  .navbar-nav {
+    margin-left: 0; } }
+
+/*--- MAIN ---*/
+/* line 137, C:/wamp64/www/aadalberttest/scss/style.scss */
+section {
+  height: 500px;
+  -ms-transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
+  -webkit-transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
+  -o-transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
+  -moz-transition: height 0.5s ease-in-out, padding 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out, padding 0.5s ease-in-out; }
+
+/* line 142, C:/wamp64/www/aadalberttest/scss/style.scss */
+section .content {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -ms-transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  -ms-tranition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  transition-delay: 0.2s; }
+
+/* line 149, C:/wamp64/www/aadalberttest/scss/style.scss */
+.section-text {
+  background-color: rgba(255, 255, 255, 0.3);
+  -ms-transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out; }
+
+/* line 154, C:/wamp64/www/aadalberttest/scss/style.scss */
+section {
+  filter: alpha(opacity=100);
+  opacity: 1;
+  padding-top: 100px;
+  text-align: center;
+  background: url("../assets/background.JPG") no-repeat;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover; }
+
+/* line 158, C:/wamp64/www/aadalberttest/scss/style.scss */
+.esi-section {
+  min-height: 500px;
+  height: 100%;
+  text-align: center;
+  background: url("../assets/background.JPG") no-repeat;
+  background-size: cover; }
+
+/* line 166, C:/wamp64/www/aadalberttest/scss/style.scss */
+.container {
+  width: 90%; }
+
+/* line 170, C:/wamp64/www/aadalberttest/scss/style.scss */
+.text-container {
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  /* line 178, C:/wamp64/www/aadalberttest/scss/style.scss */
+  .text-container h3 {
+    font-size: 32px;
+    line-height: 42px; }
+
+/* line 184, C:/wamp64/www/aadalberttest/scss/style.scss */
+.content h3 {
+  font-size: 24px;
+  line-height: 34px; }
+
+/* line 189, C:/wamp64/www/aadalberttest/scss/style.scss */
+.buttons {
+  margin-top: 60px; }
+
+/* line 193, C:/wamp64/www/aadalberttest/scss/style.scss */
+.esi-button {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: inline-block;
+  color: #1F5800;
+  font-size: 36px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 50px 10px 50px;
+  float: none;
+  -ms-transition: margin 0.2s ease-in-out, font-size 0.2s ease-in-out, padding 0.2s ease-in-out;
+  -webkit-transition: margin 0.2s ease-in-out, font-size 0.2s ease-in-out, padding 0.2s ease-in-out;
+  -o-transition: margin 0.2s ease-in-out, font-size 0.2s ease-in-out, padding 0.2s ease-in-out;
+  -moz-transition: margin 0.2s ease-in-out, font-size 0.2s ease-in-out, padding 0.2s ease-in-out;
+  transition: margin 0.2s ease-in-out, font-size 0.2s ease-in-out, padding 0.2s ease-in-out; }
+  /* line 204, C:/wamp64/www/aadalberttest/scss/style.scss */
+  .esi-button:focus {
+    background: rgba(255, 255, 255, 0.7);
+    color: #1F5800; }
+  /* line 209, C:/wamp64/www/aadalberttest/scss/style.scss */
+  .esi-button:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(11, 68, 0, 0.95);
+    -ms-transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+    -moz-transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, background 0.2s ease-in-out; }
+
+/* line 217, C:/wamp64/www/aadalberttest/scss/style.scss */
+#preloader {
+  height: 0;
+  z-index: 1001;
+  content: url(../assets/ajax-loader.gif); }
+
+/*--- TOOTED ---*/
+/* line 227, C:/wamp64/www/aadalberttest/scss/style.scss */
+.tooted_nav {
+  width: 15%;
+  height: 100%;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin-top: 50px;
+  z-index: 1; }
+  /* line 237, C:/wamp64/www/aadalberttest/scss/style.scss */
+  .tooted_nav ul {
+    list-style-type: none;
+    display: table;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px; }
+    /* line 245, C:/wamp64/www/aadalberttest/scss/style.scss */
+    .tooted_nav ul li {
+      margin-bottom: 0.8em; }
+      /* line 248, C:/wamp64/www/aadalberttest/scss/style.scss */
+      .tooted_nav ul li a {
+        color: #555;
+        font-size: 1.2em;
+        cursor: pointer; }
+
+/* line 257, C:/wamp64/www/aadalberttest/scss/style.scss */
+#tooted {
+  display: inline-block;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  position: relative;
+  height: 100%;
+  overflow: auto;
+  padding-top: 75px; }
+
+/* line 269, C:/wamp64/www/aadalberttest/scss/style.scss */
+.toode_section {
+  margin-bottom: 20px;
+  display: inline-block;
+  height: auto;
+  padding: 30px 20px 10px 20px;
+  width: 78%;
+  flex-basis: 78%;
+  background: #fff;
+  box-shadow: 0px 0px 10px #ddd;
+  margin-left: 15%; }
+  /* line 279, C:/wamp64/www/aadalberttest/scss/style.scss */
+  .toode_section .toode_title {
+    font-size: 2em; }
+  /* line 282, C:/wamp64/www/aadalberttest/scss/style.scss */
+  .toode_section .toode_desc {
+    padding-top: 10px;
+    font-size: 1.2em; }
+  /* line 286, C:/wamp64/www/aadalberttest/scss/style.scss */
+  .toode_section .toode_gallery {
+    width: 100%;
+    padding-top: 20px;
+    text-align: left; }
+    /* line 290, C:/wamp64/www/aadalberttest/scss/style.scss */
+    .toode_section .toode_gallery .owl-item {
+      display: inline-block;
+      padding: 5px;
+      width: calc(100% / 6);
+      object-fit: cover; }
+      /* line 295, C:/wamp64/www/aadalberttest/scss/style.scss */
+      .toode_section .toode_gallery .owl-item img {
+        max-height: 200px; }
+    /* line 300, C:/wamp64/www/aadalberttest/scss/style.scss */
+    .toode_section .toode_gallery .owl-wrapper-outer {
+      -ms-transition: height 0.3s ease-in-out;
+      -webkit-transition: height 0.3s ease-in-out;
+      -o-transition: height 0.3s ease-in-out;
+      -moz-transition: height 0.3s ease-in-out;
+      transition: height 0.3s ease-in-out; }
+
+/* line 306, C:/wamp64/www/aadalberttest/scss/style.scss */
+body {
+  background: #f3f3f3; }
+
+/* line 310, C:/wamp64/www/aadalberttest/scss/style.scss */
+.background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url(../assets/background.JPG) no-repeat;
+  background-size: cover; }
+
+/* line 320, C:/wamp64/www/aadalberttest/scss/style.scss */
+#kontakt {
+  height: 100%; }
+
+/* line 324, C:/wamp64/www/aadalberttest/scss/style.scss */
+.kontakt_section {
+  margin-bottom: 20px;
+  display: block;
+  height: auto;
+  padding: 20px 0px 20px 0px;
+  background: #fff;
+  box-shadow: 0px 0px 10px #ddd; }
+  /* line 331, C:/wamp64/www/aadalberttest/scss/style.scss */
+  .kontakt_section a {
+    cursor: pointer; }
+
+/* line 336, C:/wamp64/www/aadalberttest/scss/style.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+/* line 342, C:/wamp64/www/aadalberttest/scss/style.scss */
+.clearfix:after {
+  clear: both; }
+
+/* line 346, C:/wamp64/www/aadalberttest/scss/style.scss */
+.clearfix {
+  *zoom: 1; }
+
+/*--- GALERII ---*/
+/* line 352, C:/wamp64/www/aadalberttest/scss/style.scss */
+ul.gallery {
+  list-style: none;
+  padding-top: 10px;
+  display: inline-flex;
+  flex-wrap: wrap; }
+  /* line 358, C:/wamp64/www/aadalberttest/scss/style.scss */
+  ul.gallery li {
+    padding: 5px;
+    width: auto;
+    height: auto; }
+    /* line 363, C:/wamp64/www/aadalberttest/scss/style.scss */
+    ul.gallery li img {
+      height: 100% !important;
+      width: 100%;
+      object-fit: cover; }
+
+/* line 371, C:/wamp64/www/aadalberttest/scss/style.scss */
+.lb-outerContainer {
+  background-color: transparent; }
+
+/* line 375, C:/wamp64/www/aadalberttest/scss/style.scss */
+.lb-nav a.lb-next {
+  margin-right: -50px;
+  opacity: 1; }
+
+/* line 380, C:/wamp64/www/aadalberttest/scss/style.scss */
+.lb-nav a.lb-prev {
+  margin-left: -50px;
+  opacity: 1; }
+
+/* line 385, C:/wamp64/www/aadalberttest/scss/style.scss */
+.lb-data .lb-number {
+  display: none !important; }
+
+/* line 389, C:/wamp64/www/aadalberttest/scss/style.scss */
+.image:after {
+  content: '\A';
+  position: absolute;
+  width: calc(100% - 10px);
+  height: calc(100% - 5px);
+  top: 5px;
+  left: 5px;
+  background: rgba(245, 158, 36, 0.6);
+  opacity: 0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s; }
+
+/* line 399, C:/wamp64/www/aadalberttest/scss/style.scss */
+.image:hover:after {
+  opacity: 1; }
+
+@media only screen and (max-width: 1030px) {
+  /* line 407, C:/wamp64/www/aadalberttest/scss/style.scss */
+  .esi-button {
+    font-size: 24px; }
+  /* line 411, C:/wamp64/www/aadalberttest/scss/style.scss */
+  h2 {
+    font-size: 21px; }
+  /* line 415, C:/wamp64/www/aadalberttest/scss/style.scss */
+  .content h3 {
+    font-size: 18px;
+    line-height: 24px; } }
+
+@media only screen and (max-width: 811px) {
+  /* line 422, C:/wamp64/www/aadalberttest/scss/style.scss */
+  .kysi-btn {
+    margin-top: 10px; } }
+
+/*# sourceMappingURL=style.css.map */

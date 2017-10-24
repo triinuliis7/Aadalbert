@@ -1,0 +1,76 @@
+#contact {
+  margin: 0;
+
+  .contact {
+    &--map, &--text {
+      display: inline-block;
+      float: left;
+      padding: 0;
+    }
+
+    &--text {
+      display: flex;
+      flex-direction: column;
+      height: 400px;
+    }
+
+    &--lower_section {
+      display: flex;
+      margin: 0;
+    }
+
+    &--number_section {
+      background: #444;
+      padding: 2em;
+      text-align: center;
+    }
+
+    &--address_section {
+      background: #4F8B60;
+      padding: 0em 1em 1em 2em;
+      min-width: 280px;
+
+      p {
+        font-size: 1.2em;
+      }
+    }
+
+    &--img {
+      display: inline-block;
+      background: url("../assets/contact_pexels.jpeg");
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .contact {
+      &--text {
+        height: 100%;
+      }
+
+      &--address_section {
+        display: flex;
+
+        > div {
+          width: 50%;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 520px) {
+    .contact {
+      &--address_section {
+        display: block;
+        text-align: center;
+        padding: 0;
+
+        > div {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

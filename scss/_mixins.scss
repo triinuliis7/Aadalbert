@@ -1,0 +1,36 @@
+@mixin background-size($size) {
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+@mixin section($color) {
+    filter: alpha(opacity=100);
+    opacity: 1;
+    padding-top: 100px;
+    text-align: center;
+    background: $color;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+@mixin transition($transition...) {
+    -ms-transition: $transition;
+    -webkit-transition: $transition;
+    -o-transition: $transition;
+    -moz-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transition-delay($delay...) {
+    -ms-tranition-delay: $delay;
+    -webkit-transition-delay: $delay;
+    -o-transition-delay: $delay;
+    -moz-transition-delay: $delay;
+    transition-delay: $delay;
+}

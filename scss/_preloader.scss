@@ -1,0 +1,23 @@
+#loader-div {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  left: 0px;
+  background: rgba(197, 195, 195, .5);
+  z-index: 1031;
+  visibility: visible;
+  opacity: 1;
+}
+
+#loader {
+  position: fixed;
+  background: url('../assets/loading.svg');
+  background-repeat: no-repeat;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+}
