@@ -45,7 +45,7 @@
     fitImagesInViewport: true,
     // maxWidth: 800,
     // maxHeight: 600,
-    positionFromTop: 50,
+    positionFromTop: 10,
     resizeDuration: 700,
     showImageNumberLabel: true,
     wrapAround: false,
@@ -79,7 +79,7 @@
   // Attach event handlers to the new DOM elements. click click click
   Lightbox.prototype.build = function() {
     var self = this;
-    $('<div id="lightboxOverlay" class="lightboxOverlay"></div><div id="lightbox" class="lightbox"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" /><div class="lb-nav"><div class="lb-arrow-container"><a class="lb-prev lb-arrow" href="" ></a></div><div class="lb-arrow-container"><a class="lb-next lb-arrow" href="" ></a></div></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div>').appendTo($('body'));
+    $('<div id="lightboxOverlay" class="lightboxOverlay"></div><div id="lightbox" class="lightbox"><div class="lb-outerContainer"><div class="lb-container"><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" /><div class="lb-nav"><div class="lb-arrow-container--prev"><a class="lb-prev lb-arrow" href="" ></a></div><div class="lb-arrow-container--next"><a class="lb-next lb-arrow" href="" ></a></div></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div></div>').appendTo($('body'));
 
     // Cache jQuery objects
     this.$lightbox       = $('#lightbox');
@@ -113,7 +113,7 @@
       return false;
     });
 
-    this.$lightbox.find('.lb-prev').on('click', function() {
+    this.$lightbox.find('.lb-arrow-container--prev').on('click', function() {
       if (self.currentImageIndex === 0) {
         self.changeImage(self.album.length - 1);
       } else {
@@ -122,7 +122,7 @@
       return false;
     });
 
-    this.$lightbox.find('.lb-next').on('click', function() {
+    this.$lightbox.find('.lb-arrow-container--next').on('click', function() {
       if (self.currentImageIndex === self.album.length - 1) {
         self.changeImage(0);
       } else {
@@ -139,6 +139,10 @@
 
   // Show overlay and lightbox. If the image is part of a set, add siblings to album array.
   Lightbox.prototype.start = function($link) {
+    $('.navbar').css('filter', 'blur(10px)');
+    $('#main').css('filter', 'blur(10px)');
+    $('#products').css('filter', 'blur(10px)');
+    $('#contact').css('filter', 'blur(10px)');
     var self    = this;
     var $window = $(window);
 
@@ -189,10 +193,12 @@
     }
 
     // Position Lightbox
-    var top  = $window.scrollTop() + this.options.positionFromTop;
+    var top  = ($(window).height() - $('.lb-outerContainer').height()) / 2;
     var left = $window.scrollLeft();
+    console.log($('.lb-outerContainer').height());
+    console.log('top=' + top);
     this.$lightbox.css({
-      top: top + 'px',
+      top: '0px',
       left: left + 'px'
     }).fadeIn(this.options.fadeDuration);
 
@@ -242,8 +248,8 @@
 
         windowWidth    = $(window).width();
         windowHeight   = $(window).height();
-        maxImageWidth  = windowWidth - self.containerLeftPadding - self.containerRightPadding - 70;
-        maxImageHeight = windowHeight - self.containerTopPadding - self.containerBottomPadding - 120;
+        maxImageWidth  = windowWidth - self.containerLeftPadding - self.containerRightPadding - 15;
+        maxImageHeight = windowHeight - self.containerTopPadding - self.containerBottomPadding - 15;
 
         // Check if image size is larger then maxWidth|maxHeight in settings
         if (self.options.maxWidth && self.options.maxWidth < maxImageWidth) {
@@ -300,8 +306,8 @@
 
     if (oldWidth !== newWidth || oldHeight !== newHeight) {
       this.$outerContainer.animate({
-        width: newWidth,
-        height: newHeight
+        width: '100%',
+        height: 'auto'
       }, this.options.resizeDuration, 'swing', function() {
         postResize();
       });
@@ -437,6 +443,10 @@
 
   // Closing time. :-(
   Lightbox.prototype.end = function() {
+    $('.navbar').css('filter', 'none');
+    $('#main').css('filter', 'none');
+    $('#products').css('filter', 'none');
+    $('#contact').css('filter', 'none');
     this.disableKeyboardNav();
     $(window).off('resize', this.sizeOverlay);
     this.$lightbox.fadeOut(this.options.fadeDuration);

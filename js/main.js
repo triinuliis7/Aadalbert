@@ -94,7 +94,7 @@ initGallery = function() {
   $('.product-card.active').closest('.product-card').nextAll('.product-gallery:visible').each(function() {
     if ($(this).is(':visible')) {
       updateGalleryHeight($(this));
-      $(this).css('padding', '1em 1.5em 0em 1.5em');
+      $(this).css('padding', '0em 1.5em');
       $(this).toggleClass('active');
       $(this).find('.product-gallery--content.' + $('.product-card.active').attr('id')).css('display', 'flex');
       return false;

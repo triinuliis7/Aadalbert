@@ -106,7 +106,7 @@
         position: absolute;
         display: flex;
         cursor: pointer;
-        margin-top: -1em;
+        margin-top: -.5em;
 
         .arrow {
           display: inline-block;
@@ -224,31 +224,82 @@
   }
 }
 
-#lightbox {
-  display: flex;
-  justify-content: center;
-}
-
 .owl-wrapper-outer {
   height: 150px !important;
 }
 
+.owl-controls {
+  margin-bottom: -1.5em;
+}
+
 .lb-dataContainer {
   position: absolute;
-  top: -2em;
+  z-index: 99;
 }
 
 .lb-outerContainer {
-    background-color: transparent;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-.lightbox .lb-image {
-  border-radius: 0;
+.lb-outerContainer {
+}
+
+#lightbox {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  .lb-image {
+    border-radius: 0;
+  }
 }
 
 .lb-nav {
   display: flex !important;
   align-items: center;
+
+  .lb-arrow-container--prev,
+  .lb-arrow-container--next {
+    position: fixed;
+    top: 0;
+    width: 5em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+
+      .lb-next, lb-prev {
+        border-color: #aaa;
+      }
+    }
+  }
+
+  .lb-arrow-container--next {
+    right: 0;
+
+    &:hover .lb-next {
+      border-color: #aaa;
+    }
+  }
+
+  .lb-arrow-container--prev {
+    left: 0;
+
+    &:hover .lb-prev {
+      border-color: #aaa;
+    }
+  }
 
   a {
     margin-right: -50px;
@@ -267,18 +318,12 @@
       transform: rotate(45deg);
       width: 1.4em;
       opacity: 1;
-      margin-right: -2em;
-
-      &:hover {
-        border-color: #aaa;
-      }
     }
 
     &.lb-prev {
       transform: rotate(-135deg);
       width: 1.4em;
       opacity: 1;
-      margin-left: -2em;
 
       &:hover {
         border-color: #aaa;
@@ -287,40 +332,41 @@
   }
 }
 
-.lb-data .lb-close {
-  position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  overflow: hidden;
-  background: none;
-  opacity: 1;
-  &:hover {
-    &:before, &:after {
-      background: #ccc;
+.lb-data {
+  width: 100%;
+
+  .lb-closeContainer {
+    height: 3em;
+    width: 3em;
+    right: 1em;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .lb-close {
+      position: relative;
+      display: inline-block;
+      width: 2em;
+      height: 2em;
+      overflow: hidden;
+      opacity: 1;
+      background-image: url(../assets/close.png);
+      background-size: cover;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .lb-close {
+        background-image: url(../assets/close-hover.png);
+      }
     }
   }
 
-  &:before, &:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    background: #fff;
-    height: 2px;
-    margin-top: -2px;
-  }
 
-  &:before {
-    transform: rotate(45deg);
-  }
 
-  &:after {
-    transform: rotate(-45deg);
+  .lb-number {
+      display: none !important;
   }
-}
-
-.lb-data .lb-number {
-    display: none !important;
 }
