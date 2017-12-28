@@ -195,8 +195,6 @@
     // Position Lightbox
     var top  = ($(window).height() - $('.lb-outerContainer').height()) / 2;
     var left = $window.scrollLeft();
-    console.log($('.lb-outerContainer').height());
-    console.log('top=' + top);
     this.$lightbox.css({
       top: '0px',
       left: left + 'px'
@@ -220,7 +218,7 @@
     this.$overlay.fadeIn(this.options.fadeDuration);
 
     $('.lb-loader').fadeIn('slow');
-    this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-caption').hide();
+    this.$lightbox.find('.lb-image, .lb-nav, .lb-numbers, .lb-caption').hide();
 
     this.$outerContainer.addClass('animating');
 
@@ -248,8 +246,8 @@
 
         windowWidth    = $(window).width();
         windowHeight   = $(window).height();
-        maxImageWidth  = windowWidth - self.containerLeftPadding - self.containerRightPadding - 15;
-        maxImageHeight = windowHeight - self.containerTopPadding - self.containerBottomPadding - 15;
+        maxImageWidth  = windowWidth - self.containerLeftPadding - self.containerRightPadding;
+        maxImageHeight = windowHeight - self.containerTopPadding - self.containerBottomPadding;
 
         // Check if image size is larger then maxWidth|maxHeight in settings
         if (self.options.maxWidth && self.options.maxWidth < maxImageWidth) {
@@ -284,8 +282,8 @@
   // Stretch overlay to fit the viewport
   Lightbox.prototype.sizeOverlay = function() {
     this.$overlay
-      .width($(document).width())
-      .height($(document).height());
+      .width('100%')
+      .height('100%');
   };
 
   // Animate the size of the lightbox to fit the image we are showing

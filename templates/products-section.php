@@ -16,8 +16,8 @@
         for ($j = 1; $j < $images_length + 1; $j++) {
           $img_element =
             '<li class="col-xs-6 col-sm-3 ' . $gallery_asset . '">
-              <a href="assets/' . $gallery_asset . '/' . $gallery_asset . $j . '.JPG" class="image" data-lightbox="' . $gallery_asset . '">
-                <img src="assets/' . $gallery_asset . '/' . $gallery_asset . $j . '_350.JPG">
+              <a href="assets/' . $gallery_asset . '/' . $gallery_asset . $j . '.jpg" class="image" data-lightbox="' . $gallery_asset . '">
+                <img src="assets/' . $gallery_asset . '/' . $gallery_asset . $j . '_350.jpg">
               </a>
             </li>';
           array_push($img_elements, $img_element);

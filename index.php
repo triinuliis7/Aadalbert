@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="css/lightbox.min.css">
   <link href="css/owl.theme.css" rel="stylesheet">
   <link href="css/owl.carousel.css" rel="stylesheet">
+  <!-- <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet"> -->
   <link href="scss/style.min.css" rel="stylesheet">
 
 </head>
@@ -77,6 +78,7 @@
   <?php include 'templates/contact-section.php';?>
 
   <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.5.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/lightbox.js"></script>
   <script src="js/jquery.easing.min.js"></script>
