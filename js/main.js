@@ -53,7 +53,9 @@ function removeLoader() {
 }
 
 function updateGalleryHeight(activeGallery) {
-  var galleryHeight = $(activeGallery).find('.gallery').outerHeight() == 0 || $(activeGallery).find('.gallery').outerHeight() > 200 ? 200 : $(activeGallery).find('.gallery').outerHeight();
+  // var galleryHeight = $(activeGallery).find('.gallery').outerHeight() == 0 || $(activeGallery).find('.gallery').outerHeight() > 200 ? 200 : $(activeGallery).find('.gallery').outerHeight();
+  var galleryHeight = $(activeGallery).find('.product-gallery--text:visible').outerHeight();
+  galleryHeight += $(activeGallery).find('.product-gallery--container:visible').outerHeight();
   $(activeGallery).css('height', galleryHeight + 40);
   $(activeGallery).find('li').css('height', galleryHeight - 50);
 }
@@ -94,13 +96,17 @@ initGallery = function() {
   $('.product-gallery').css('height', 0);
   $('.product-gallery').css('padding', 0);
   $('.product-gallery--content').hide();
+  $('.product-gallery--text').hide();
+  $('.product-gallery--container').hide();
 
   $('.product-card.active').closest('.product-card').nextAll('.product-gallery:visible').each(function() {
     if ($(this).is(':visible')) {
-      updateGalleryHeight($(this));
       $(this).css('padding', '0em 1.5em');
       $(this).toggleClass('active');
-      $(this).find('.product-gallery--content.' + $('.product-card.active').attr('id')).css('display', 'flex');
+      $(this).find('.product-gallery--content.' + $('.product-card.active').attr('id')).show();
+      $(this).find('.product-gallery--text.' + $('.product-card.active').attr('id')).css('display', 'flex');
+      $(this).find('.product-gallery--container.' + $('.product-card.active').attr('id')).css('display', 'flex');
+        updateGalleryHeight($(this));
       return false;
     }
   });

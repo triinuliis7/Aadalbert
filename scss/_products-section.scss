@@ -38,7 +38,6 @@
         -webkit-filter: grayscale(100%);
         -webkit-filter: grayscale(1);
         filter: grayscale(100%);
-        filter: url('../assets/gray.svg#grayscale');
         filter: gray;
       }
 
@@ -144,7 +143,7 @@
       }
     }
 
-    &--content, &--images {
+    &--images {
       height: 100%;
       width: 100%;
       overflow: hidden;
@@ -152,37 +151,56 @@
       align-items: center;
     }
 
+    &--content {
+      height: 200px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    &--container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding-bottom: 2em;
+    }
+
+    &--text {
+      padding: 0 1.5em;
+      margin-top: 1.5em;
+    }
+
     &:nth-of-type(8n) {
       @media (min-width: 992px) {
         position: relative;
-        display: flex;
+        display: block;
       }
     }
 
     &:nth-of-type(6n) {
       @media (min-width: 768px) and (max-width: 991px) {
         position: relative;
-        display: flex;
+        display: block;
       }
     }
 
     &:nth-of-type(4n) {
       @media (min-width: 500px) and (max-width: 767px) {
         position: relative;
-        display: flex;
+        display: block;
       }
     }
 
     &:nth-of-type(2n) {
       @media (max-width: 499px) {
         position: relative;
-        display: flex;
+        display: block;
       }
     }
 
     &:last-of-type {
       position: relative;
-      display: flex;
+      display: block;
     }
   }
 
